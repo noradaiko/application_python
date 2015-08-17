@@ -32,7 +32,7 @@ module PoiseApplicationPython
         include PoiseApplicationPython::ServiceMixin
         provides(:application_gunicorn)
 
-        attribute(:app_module, kind_of: String, default: lazy { default_app_module })
+        attribute(:app_module, kind_of: String, default: 'manage'
         attribute(:bind, kind_of: [String, Array], default: '0.0.0.0:80')
         attribute(:config, kind_of: [String, NilClass])
         attribute(:preload_app, equal_to: [true, false], default: false)
